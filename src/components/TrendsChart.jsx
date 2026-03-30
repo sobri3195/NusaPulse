@@ -29,6 +29,14 @@ export default function TrendsChart() {
                 <stop offset="5%" stopColor="#F59E0B" stopOpacity={0.7} />
                 <stop offset="95%" stopColor="#F59E0B" stopOpacity={0} />
               </linearGradient>
+              <linearGradient id="public" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#22D3EE" stopOpacity={0.7} />
+                <stop offset="95%" stopColor="#22D3EE" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="talent" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#A3E635" stopOpacity={0.7} />
+                <stop offset="95%" stopColor="#A3E635" stopOpacity={0} />
+              </linearGradient>
             </defs>
             <CartesianGrid stroke="#233047" strokeDasharray="3 3" />
             <XAxis dataKey="month" stroke="#9FB0C7" />
@@ -36,6 +44,8 @@ export default function TrendsChart() {
             <Tooltip contentStyle={{ background: '#0F172A', border: '1px solid #233047' }} />
             <Area type="monotone" dataKey="biz" stroke="#10B981" fill="url(#biz)" />
             <Area type="monotone" dataKey="market" stroke="#F59E0B" fill="url(#market)" />
+            <Area type="monotone" dataKey="public" stroke="#22D3EE" fill="url(#public)" />
+            <Area type="monotone" dataKey="talent" stroke="#A3E635" fill="url(#talent)" />
           </AreaChart>
         </ResponsiveContainer>
       </div>
